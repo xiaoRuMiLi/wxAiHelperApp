@@ -1,0 +1,27 @@
+@mixin text-title()
+{
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(36, 35, 35);
+}
+
+@mixin text-small()
+{
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(22, 22, 22);
+}
+
+@mixin text-middle()
+{
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(22, 22, 22);
+}
+
+@mixin text-large()
+{
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(22, 22, 22);
+}

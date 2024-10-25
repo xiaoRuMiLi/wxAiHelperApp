@@ -1,0 +1,53 @@
+/* components/aihelper-pannel/aihelper-pannel.wxss */
+@import "../../global/wxss/bg/_index.scss";
+@import "../../global/wxss/text/index.scss";
+$person-width: 100px;
+$person-height: 100px;
+.ai-helper-container {
+  position: relative;
+  @include bg-gradent(to bottom);
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  .left {
+    height: 100%;
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include text-title();
+    }
+    .answer {
+      @include text-middle();
+    }
+
+  }
+  .right {
+    @keyframes morelarge {
+      from {
+        width: $person-width;
+        height: $person-height;
+        opacity: 1;
+      } 
+      to {
+        width: 110px;
+        height: 110px;
+        opacity: 0.5;
+      }
+      
+    }
+    height: 100%;
+    .person {
+      width: $person-width;
+      height: $person-height;
+      /*active 作用于按住的时候，松开的时候作用消失，hover作用于按下*/
+      &:active {
+        animation: morelarge 0.5s forwards;
+      }
+      
+    }
+  }
+
+}

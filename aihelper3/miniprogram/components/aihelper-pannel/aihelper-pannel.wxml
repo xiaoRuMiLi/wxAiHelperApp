@@ -1,0 +1,19 @@
+<!--components/aihelper-pannel/aihelper-pannel.wxml-->
+<text>components/aihelper-pannel/aihelper-pannel.wxml</text>
+<view class="ai-helper-container">
+<view class="left">
+  <block wx:if="{{welcome}}">
+    <view class="welcome">
+      <text>{{title}}</text>
+    </view>
+  </block>
+  <view class="answer">
+  <text> {{text}}</text>
+
+  </view>
+</view>
+<view class="right" bindlongpress="handleLongPress" catch:touchend="handleTouchEnd">
+  <image class="person" mode="aspectFit" src="{{imgSrc}}"></image>
+</view>
+
+</view>

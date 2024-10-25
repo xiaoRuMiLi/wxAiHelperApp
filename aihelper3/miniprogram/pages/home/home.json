@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "aihelper-pannel": "/components/aihelper-pannel/aihelper-pannel"
+  }
+}

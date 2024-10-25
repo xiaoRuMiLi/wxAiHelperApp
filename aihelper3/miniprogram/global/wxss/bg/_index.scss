@@ -1,0 +1,20 @@
+/** 混合默认值, 默认值可以是一个CSS属性，也可以是其它变量的引用值 **/
+@mixin link-colors(
+    $normal,
+    $hover: $normal, 
+    $visited: $normal
+  )
+{
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+
+@mixin bg-gradent(
+  $direction: to right,
+  $color: #a8f133,
+  $to-color: rgba(253, 253, 253, 0.801),
+)
+{
+  background-image: linear-gradient($direction, $color, $to-color);
+}
