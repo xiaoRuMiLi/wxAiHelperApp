@@ -1,4 +1,5 @@
 /** 混合默认值, 默认值可以是一个CSS属性，也可以是其它变量的引用值 **/
+$background-color: #e4e4e4;
 @mixin link-colors(
     $normal,
     $hover: $normal, 

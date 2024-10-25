@@ -2,11 +2,20 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
 <view class="aihelper-container">
-<aihelper-pannel
-bind:tap="myfun"
-text="{{aiAnswer}}"
-bind:onPersonLongPress="handleListenStart"
-catch:onListenEnd="handleListenEnd"
-></aihelper-pannel>
+  <aihelper-pannel
+  bind:tap="myfun"
+  text="{{aiAnswer}}"
+  bind:onPersonLongPress="handleListenStart"
+  catch:onListenEnd="handleListenEnd"
+  ></aihelper-pannel>
 </view>
+<view class="search-container">
+<search-input
+maxLength="50"
+bind:searchInput="bindSearchInput"
+catch:bindSearch="bindSearch"
+/>
+</view>
+<horizontal-slider>
+</horizontal-slider>
 </scroll-view>

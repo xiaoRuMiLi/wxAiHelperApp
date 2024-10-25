@@ -16,6 +16,16 @@ Page({
   handleListenEnd(e: {detail: any}) {
     console.log(e.detail);
   },
+  bindSearchInput(e: any)
+  {
+
+    console.log("搜索输入值改变事件", e.detail.value);
+  },
+  bindSearch(e: any)
+  {
+    console.log("点击搜索", e.detail.value);
+
+  },
   
   /**
    * 生命周期函数--监听页面加载

@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
-    "aihelper-pannel": "/components/aihelper-pannel/aihelper-pannel"
+    "aihelper-pannel": "/components/aihelper-pannel/aihelper-pannel",
+    "search-input": "/components/search-input/search-input",
+    "horizontal-slider": "components/horizontal-slider/horizontal-slider"
   }
 }
