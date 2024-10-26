@@ -1,20 +1,21 @@
 <!--pages/home/components/horizontal-slider/horizontal-slider.wxml-->
 <view class="horizontal-slider">
   <scroll-view class="scrollable-container" scroll-x="{{true}}">
-    
-      <view class="component">
+    <view class="items">
+      <view wx:for="{{itemList}}" wx:key="unique" wx:for-index="index" class="component" data-key="{{index}}" bind:tap="handleTapItem">
         <view class="left">
           <view class="title">
-            <text>手办玩偶群</text>
+            <text class="content">{{item.title}}</text>
           </view>
           <view class="text">
-            <text>玩友交流的园地</text>
+            <text class="content">{{item.text}}</text>
           </view>
         </view>
         <view class="right">
-          <image></image>
+          <image mode="aspectFit" class="img" src="{{item.img}}"></image>
         </view>
       </view>
+    </view>
     
   </scroll-view>
 </view>

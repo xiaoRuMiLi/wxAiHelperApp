@@ -19,3 +19,39 @@ $background-color: #e4e4e4;
 {
   background-image: linear-gradient($direction, $color, $to-color);
 }
+
+@mixin child-random-bg-gradent(
+  $element: view
+)
+{
+  // 定义颜色列表
+  $colors: (
+    'primary': #add1e9,
+    'success': #bae9ce,
+    'info': #e2ebbd,
+    'warning': #e7d7bd,
+    'danger': #e9bdbc
+  );
+
+  @for $i from 1 through length($colors) 
+  {
+    // 生成一个随机键名
+    // 获取所有键名的列表
+    $keys: map-keys($colors);
+
+    // 生成一个随机索引
+    $random-index: random(length($keys));
+
+    // 使用随机索引获取随机键名
+    $random-key: nth($keys, $random-index);
+
+    // 使用随机键名获取 map 中的值
+    $random-color: map-get($colors, $random-key);
+
+    & > #{$element}:nth-child(#{$i})
+    {
+      background-image: linear-gradient(to right, #{map-get($colors, $random-key)}, hsla(0, 16%, 89%, 0.459));
+    }
+    
+  }
+}

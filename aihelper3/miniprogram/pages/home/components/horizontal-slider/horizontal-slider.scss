@@ -1,24 +1,53 @@
 /* pages/home/components/horizontal-slider/horizontal-slider.wxss */
 @import "../../../../global/wxss/bg/_index.scss";
+@import "../../../../global/wxss/text/_index.scss";
+
 .scrollable-container {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: $background-color;
+  
   border-radius: 10px;
   box-sizing: border-box;
-  height: 100px;
-  .component {
-    display: flex;
-    height: 100%;
-    @include bg-gradent(to right);
   
-    .left {
+  .items {
+    display: flex;
+    gap: 10px; /* 设置子元素之间的间隔为10px */
+    .component {
+      padding: 5px 10px;
+      flex-shrink: 0;
+      width: 50%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
       height: 100%;
-      
+      position: relative;
+      @include bg-gradent(to right);
+      .left {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title .content {
+          @include  title-middle();
+
+        }
+        .text .content {
+          @include text-small();
+          font-size: 13px;
+        }
+  
+      }
+      .right {
+        height: 100%;
+        .img {
+          width: 80px;
+          height: 80px;
+        }
+      }
     }
-    .right {
-      height: 100%;
-    }
+    @include child-random-bg-gradent();
+    
   }
+  
 }

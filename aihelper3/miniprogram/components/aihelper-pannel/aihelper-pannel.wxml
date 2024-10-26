@@ -8,8 +8,7 @@
     </view>
   </block>
   <view class="answer">
-  <text> {{text}}</text>
-
+    <text> {{text}}</text>
   </view>
 </view>
 <view class="right" bindlongpress="handleLongPress" catch:touchend="handleTouchEnd">
