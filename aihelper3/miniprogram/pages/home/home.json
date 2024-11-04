@@ -3,6 +3,9 @@
     "navigation-bar": "/components/navigation-bar/navigation-bar",
     "aihelper-pannel": "/components/aihelper-pannel/aihelper-pannel",
     "search-input": "/components/search-input/search-input",
-    "horizontal-slider": "components/horizontal-slider/horizontal-slider"
+    "horizontal-slider": "components/horizontal-slider/horizontal-slider",
+    "cell": "/components/cell/cell",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index"
   }
 }

@@ -1,0 +1,29 @@
+/* components/cell/cell.wxss */
+@import "../../global/wxss/bg/_index.scss";
+@import "../../global/wxss/text/index.scss";
+@import "../../assets/iconfont/iconfont.scss";
+.cell-container {
+  padding: 10px;
+  margin-top: 10px;
+  .top-view {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+      text {
+        @include title-large();
+      }
+    }
+    .right {
+      .text-container {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

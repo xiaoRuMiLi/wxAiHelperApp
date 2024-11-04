@@ -8,10 +8,8 @@ Component({
     itemList: {
       type: Array,
       value: [
+        {title: "创建智能体", text: "创建专属智能体", img: "/static/image/person/smallgirl-removebg-preview.png"},
         {title: "测试标题", text: "测试使用文本内容", img: "/static/image/person/smallgirl-removebg-preview.png"},
-        {title: "测试标题", text: "测试使用文本内容", img: "/static/image/person/smallgirl-removebg-preview.png"},
-        {title: "测试标题", text: "测试使用文本内容", img: "/static/image/person/smallgirl-removebg-preview.png"},
-        {title: "测试标题", text: "测试使用文本内容", img: "/static/image/person/smallgirl-removebg-preview.png"}
       ]
     }
 
@@ -32,7 +30,7 @@ Component({
     handleTapItem(e: any)
     {
       // 抛出元素被点击事件
-      this.triggerEvent("bindTapItem", {index: e.currentTarget.dataset.key});
+      this.triggerEvent("onTapItem", {index: e.currentTarget.dataset.key});
       
     },
     

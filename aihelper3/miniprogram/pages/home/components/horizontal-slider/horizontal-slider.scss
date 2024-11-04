@@ -16,12 +16,13 @@
     .component {
       padding: 5px 10px;
       flex-shrink: 0;
-      width: 50%;
+      width: 48%;
       border-radius: 10px;
       display: flex;
       align-items: center;
       height: 100%;
       position: relative;
+      box-sizing: border-box;
       @include bg-gradent(to right);
       .left {
         height: 100%;

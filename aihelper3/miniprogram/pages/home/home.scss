@@ -1,5 +1,6 @@
 /* pages/home/home.wxss */
-
+@import "../../global/wxss/text/_index.scss";
+@import "../../global/wxss/bg/_index.scss";
 page {
   height: 100vh;
   display: flex;
@@ -10,4 +11,41 @@ page {
   overflow-y: hidden;
   padding: 10px;
   box-sizing: border-box;
+}
+.helper-container {
+  padding: 20px 0;
+}
+.helper {
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 子元素之间的间距 */
+  @include bg-gradent(to bottom, #e6e8e9fb, #eef0f0fb);
+  border-radius: 10px;
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 70%;
+    padding: 15px;
+    border-radius: 10px;
+    .title {
+      width: 80%;
+      @include title-middle(); 
+
+    }
+    .content {
+      width: 80%;
+      @include text-middle();
+
+    }
+  }
+  .right {
+    width: 30%;
+
+  }
 }

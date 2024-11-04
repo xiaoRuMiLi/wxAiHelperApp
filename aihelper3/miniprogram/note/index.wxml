@@ -1,0 +1,37 @@
+<view>
+<text>
+使用vant weapp
+  1.在项目目录安装vant weapp 
+    这里有个注意事项就是如果安装后报错或者不能使用可以调整不同的版本来安装，或者重启开发者工具
+    npm install @vant/weapp@1.10.4 -s -y
+  2. 在project.config.json 中增加配置 
+    "packNpmManually": true,
+      "packNpmRelationList": [
+        {
+          "packageJsonPath": "./package.json",
+          "miniprogramNpmDistDir": "./miniprogram/"
+        }
+      ]
+  3. 开发者工具中点击，工具》构建 npm ，生成miniprogram_npm 文件夹
+  4. 将 app.json中的 “style”:"v2"，去除，小程序的新版基础组件强行加上了许多样式，难以覆盖，不关闭将造成部分组件样式混乱
+  5. 项目中使用
+    在页面json文件中按需引入 usingComponents {"van-button": "@vant/weapp/button/index"}
+
+使用阿里巴巴iconfont图标库
+  1. 进入网址https://www.cnblogs.com/wesky/p/17004319.html    
+  2. 将图标库放入购物车， 集成到项目
+  2. 项目设置中选择base64，woff2, ttf
+  3. 下载到本地，解压， 
+  4. 将解压的文件放入项目的某个文件夹，assets/inconfont 
+  5. 将iconfont.css 变更为scss
+  6. 项目引入， @import "**/**/**/inconfont.scss"
+  7. 使用 <text class="iconfont icon-menu", 在vant icon 使用 <van-icon class-prefix="my-icon" name="extra" />
+构建npm 
+  工具》构建npm
+  构建npm的意思是在项目内产生miniprogram_npm 文件件，将外部package.json中的依赖组件库拉取到该文件夹，使文件为可用状态。
+参考 https://blog.51cto.com/u_15315508/3211775, https://www.jb51.net/article/262689.htm
+</text>
+
+<text>
+</text>
+</view>

@@ -16,6 +16,32 @@ bind:searchInput="bindSearchInput"
 catch:bindSearch="bindSearch"
 />
 </view>
-<horizontal-slider>
+<horizontal-slider bind:onTapItem="handleTapItem">
 </horizontal-slider>
+
+<cell title="创意灵感" value="更多" isLink="{{true}}">
+  <view class="helper-container">
+    <view class="helper">
+      <view class="left">
+        <view class="title">
+        资深儿科医生
+        </view>
+        <view class="content">
+        模仿一个儿科医生，根据专业知识回答你关于儿科的问题
+        </view>
+      </view>
+      <view class="right">
+      </view>
+    </view>
+  </view>
+</cell>
+
+<!--
+<view >
+  <van-button type="primary" size="mini">安妮</van-button>
+  <van-icon name="close" color="red"/>
+  <text class="iconfont icon-jinru"></text>
+  <van-icon class-prefix="iconfont" name="jinru" />
+</view>
+-->
 </scroll-view>

@@ -1,0 +1,15 @@
+<!--components/cell/cell.wxml-->
+<view class="cell-container">
+  <view class="top-view">
+    <view class="left">
+      <text>{{title}}</text>
+    </view>
+    <view wx:if="{{isLink}}" class="right">
+      <view class="text-container" bind:tap="handleTapRight">
+        <text class="text">{{value}}</text>
+        <van-icon name="arrow"/>
+      </view>
+    </view>
+  </view>
+<slot></slot>
+</view>

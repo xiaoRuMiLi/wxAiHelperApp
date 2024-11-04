@@ -26,6 +26,10 @@ Page({
     console.log("点击搜索", e.detail.value);
 
   },
+  handleTapItem(e: any)
+  {
+    console.log("点击项目")
+  },
   
   /**
    * 生命周期函数--监听页面加载
