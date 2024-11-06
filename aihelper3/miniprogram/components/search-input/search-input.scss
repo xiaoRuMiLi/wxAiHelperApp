@@ -1,6 +1,9 @@
 /* components/search-input.wxss */
 @import "../../global/wxss/text/_index.scss";
-
+.search-pannel {
+  padding: 10px;
+  box-sizing: border-box;
+}
 .search {
   padding: $padding-middle, $padding-large;
   display: flex;

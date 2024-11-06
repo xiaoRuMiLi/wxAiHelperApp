@@ -1,0 +1,21 @@
+$white: #dfdfdf;
+$lightBlue: #3498db;
+$lightGreen: #2ecc71;
+$lightCyan: #5dade2;
+$lightYellow: #f39c12;
+$lightRed: #e74c3c;
+$lightGrey: #777777;
+
+$colors: (
+  'blue': $lightBlue,
+  'green':  $lightGreen,
+  'cyan':  $lightCyan,
+  'yellow': $lightYellow,
+  'red': $lightRed
+);
+// 生成一个随机键名
+$random-key: nth(map-keys($colors), random(length($colors)));
+
+// 使用随机键名获取随机颜色
+$random-color: map-get($colors, $random-key);
+

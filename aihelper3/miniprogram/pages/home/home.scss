@@ -1,6 +1,7 @@
 /* pages/home/home.wxss */
 @import "../../global/wxss/text/_index.scss";
 @import "../../global/wxss/bg/_index.scss";
+@import "../../global/wxss/color/_index.scss";
 page {
   height: 100vh;
   display: flex;
@@ -20,32 +21,59 @@ page {
   box-sizing: border-box;
   background-color: aqua;
   display: flex;
-  flex-direction: column;
+  flex-direction: flex;
   gap: 10px; /* 子元素之间的间距 */
   @include bg-gradent(to bottom, #e6e8e9fb, #eef0f0fb);
   border-radius: 10px;
+  align-items: center;
   .left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
-    width: 70%;
+    width: 80%;
     padding: 15px;
     border-radius: 10px;
     .title {
       width: 80%;
-      @include title-middle(); 
-
+      text {
+        @include title-middle(); 
+      }
+     
     }
     .content {
       width: 80%;
-      @include text-middle();
+      text {
+        height: 20px;
+        @include text-small();
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+     
 
     }
   }
   .right {
-    width: 30%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .appreciate {
+      margin-bottom: 5px;
+      text {
+        background-color: $lightGrey;
+        border-radius: 50%;
+        color: white;
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
+
+    .text text {
+      @include text-middle();
+      color: $lightYellow;
+    }
 
   }
 }

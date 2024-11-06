@@ -20,17 +20,23 @@ catch:bindSearch="bindSearch"
 </horizontal-slider>
 
 <cell title="创意灵感" value="更多" isLink="{{true}}">
-  <view class="helper-container">
+  <view wx:for="{{recommendList}}" wx:key="unique" wx:for-index="index" class="helper-container">
     <view class="helper">
       <view class="left">
         <view class="title">
-        资深儿科医生
+          <text >{{item.title}}</text>
         </view>
         <view class="content">
-        模仿一个儿科医生，根据专业知识回答你关于儿科的问题
+           <text>{{item.description}}</text>
         </view>
       </view>
       <view class="right">
+        <view class="appreciate">
+          <text> {{item.appreciate}} </text>
+        </view>
+        <view class="text">
+          <text> 赞赏 </text>
+        </view>
       </view>
     </view>
   </view>

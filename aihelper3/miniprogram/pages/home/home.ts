@@ -5,7 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    aiAnswer: "我是你的智能客服，长按我可以问我问题，你有什么想了解的吗？"
+    aiAnswer: "我是你的智能客服，长按我可以问我问题，你有什么想了解的吗？",
+    recommendList: [
+      {
+        title: "政务中心咨询台",
+        description: "模仿政务中心咨询台接待员，询问办事人员所要办的政务，并给出建议",
+        appreciate: 50
+
+      },
+      {
+        title: "汽车修理厂客服",
+        description: "询问客户诉求，并为客户分析故障，报修故障登记和维修时间预约。",
+        appreciate: 10
+
+      },
+      {
+        title: "销售回访员",
+        description: "收集客户反馈，并询问客户给商品给出意见和评分",
+        appreciate: 15
+
+      },
+      {
+        title: "某医院咨询台",
+        description: "指导患者就医流程，回答患者问题，并可以根据患者的就医科室给患者指路",
+        appreciate: 8
+
+      }
+    ]
 
   },
   
